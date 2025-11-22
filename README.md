@@ -1,5 +1,7 @@
 # Battlefield 6 Crossplay Toggler
 
+![Capture d’écran 2025-11-22 225930](https://github.com/user-attachments/assets/b48e3647-5cb5-483d-b846-dbbfe8d1c853)
+
 ## 🎮 Overview
 
 A lightweight Windows utility that allows you to quickly toggle crossplay settings for Battlefield 6 without navigating through game files. 
