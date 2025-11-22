@@ -7,7 +7,7 @@ activeFilePath := ""
 
 ; Create GUI
 myGui := Gui()
-myGui.Title := "Battlefield 6 Crossplay Toggle"
+myGui.Title := "Battlefield 6 Crossplay Toggler"
 myGui.OnEvent("Close", (*) => ExitApp())
 
 ; Status text - increased height
@@ -90,17 +90,17 @@ UpdateStatus() {
                 disableBtn.Enabled := false
             }
         } else {
-            ; Setting not found - default to OFF state
-            statusText.Text := "CrossPlay is OFF (not set)"
-            statusText.SetFont("s12 bold cOrange")
-            ; Enable the enable button, disable the disable button (since it's already effectively off)
+            ; Setting not found - default to ON state
+            statusText.Text := "CrossPlay is ON (not set)"
+            statusText.SetFont("s12 bold cMaroon")
             enableBtn.Enabled := true
-            disableBtn.Enabled := true  ; Allow setting it explicitly to 0
+            disableBtn.Enabled := true 
         }
     } catch as err {
-        statusText.Text := "Error reading file!"
-        statusText.SetFont("s12 bold cRed")
-        MsgBox("Error: " . err.Message, "Error", "Icon!")
+        statusText.Text := "CrossPlay is ON (not set)"
+        statusText.SetFont("s12 bold cMaroon")
+        enableBtn.Enabled := true
+        disableBtn.Enabled := true
     }
 }
 
